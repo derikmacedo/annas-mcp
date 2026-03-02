@@ -46,7 +46,7 @@ If you plan to use the tool for its MCP server functionality, you need to integr
     "command": "/Users/iosifache/Downloads/annas-mcp",
     "args": ["mcp"],
     "env": {
-        "ANNAS_SECRET_KEY": "feedfacecafebeef",
+        "ANNAS_SECRET_KEY": "<your-secret-key>",
         "ANNAS_DOWNLOAD_PATH": "/Users/iosifache/Downloads"
     }
 }

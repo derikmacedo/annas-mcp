@@ -26,10 +26,10 @@ func GetEnv() (*Env, error) {
 		err := errors.New("ANNAS_SECRET_KEY and ANNAS_DOWNLOAD_PATH environment variables must be set")
 
 		l.Error("Environment variables not set",
-			zap.String("ANNAS_SECRET_KEY", secretKey),
-			zap.String("ANNAS_DOWNLOAD_PATH", downloadPath),
-			zap.String("ANNAS_BASE_URL", annasBaseURL),
-			zap.Error(err),
+		zap.Bool("ANNAS_SECRET_KEY_set", secretKey != ""),
+		zap.Bool("ANNAS_DOWNLOAD_PATH_set", downloadPath != ""),
+		zap.String("ANNAS_BASE_URL", annasBaseURL),
+		zap.Error(err),
 		)
 
 		return nil, err
